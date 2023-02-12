@@ -44,7 +44,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField signUpLastName;
     // This is the alert label
-    
+    @FXML
+    private Label dys,comp;
 
     @FXML
     private void goToRegister(ActionEvent event) throws IOException {
@@ -59,6 +60,7 @@ public class FXMLDocumentController implements Initializable {
             return; // Do not continue. the database object is empty
         }
         id = db.signin(textUsername.getText(), textPassword.getText());
+        
         if (id != -1) {
             changePage("ChoicePage.fxml");
         }
@@ -91,12 +93,19 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void goToChoice(ActionEvent event) throws IOException {
+        DBClass db = CPCS405_PROJECT.getDB();
         changePage("ChoicePage.fxml");
+        dys.setText(dys.getText() + ": " + db.countScoreOfGameByID(id+"", 1));
+        comp.setText(comp.getText() + ": " + db.countScoreOfGameByID(id+"", 2));
     }
 
     @FXML
-    private void goToGame(ActionEvent event) throws IOException {
-        changePage("GamePage.fxml");
+    private void goToDys(ActionEvent event) throws IOException {
+        changePage("DyscalculiaGUI.fxml");
+    }
+    @FXML
+    private void goToComp(ActionEvent event) throws IOException {
+        changePage("NumberComperatorGUI.fxml");
     }
 
     @FXML

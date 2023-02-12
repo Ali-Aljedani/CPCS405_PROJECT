@@ -47,21 +47,31 @@
                   <Font size="37.0" />
                </font>
             </Label>
-            <Button layoutX="121.0" layoutY="188.0" mnemonicParsing="false" text="First Game" onAction="#goToGame">
+            <Button layoutX="121.0" layoutY="188.0" mnemonicParsing="false" onAction="#goToDys" text="Dys calculia">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button layoutX="358.0" layoutY="188.0" mnemonicParsing="false" text="Second Game" onAction="#goToGame">
+            <Button layoutX="358.0" layoutY="188.0" mnemonicParsing="false" onAction="#goToComp" text="Number Comperator">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button layoutX="268.0" layoutY="315.0" mnemonicParsing="false" text="Sign Out" onAction="#signOut">
+            <Button layoutX="243.0" layoutY="335.0" mnemonicParsing="false" onAction="#signOut" prefHeight="51.0" prefWidth="155.0" text="Sign Out">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
+            <Label layoutX="122.0" layoutY="264.0" prefHeight="30.0" prefWidth="361.0" text="Your Score for dyscalculia is" fx:id="dys">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="289.0" prefHeight="30.0" prefWidth="465.0" text="Your Score for Number Comperator is" fx:id="comp">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>

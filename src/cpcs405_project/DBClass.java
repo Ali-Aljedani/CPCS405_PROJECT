@@ -180,9 +180,9 @@ public class DBClass {
         }
     }
     
-    public int countScoreOfGameByUsername(String username,int GameNumebr){
+    public int countScoreOfGameByID(String id,int GameNumebr){
 
-        String query = "Select Count(*) from GAMES WHERE USERID = "+getUserIDByUsername(username)+" AND GAMENUMBER = "+GameNumebr;
+        String query = "Select Count(*) from GAMES WHERE USERID = "+ id +" AND GAMENUMBER = "+GameNumebr;
     
         try {
             Statement stet = con.createStatement();
